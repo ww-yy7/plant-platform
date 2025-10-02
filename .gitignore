@@ -1,0 +1,64 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Build output
+.next/
+dist/
+build/
+
+# Taro build
+temp/
+cache/
+*.tmp
+*.tsbuildinfo
+
+# Environment variables
+.env*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+.Spotlight-V100
+.Trashes
+
+# Docker
+docker-compose.override.yml
+mysql-data/
+*.pid
+*.sock
+
+# Husky / lint-staged / git hooks
+.husky/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Generated files
+public/**/*.js
+public/**/*.css
+
+# Coverage reports
+coverage/
+
+# Misc
+*.bak
+*.swp
+*.tmp
