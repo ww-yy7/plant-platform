@@ -1,64 +1,28 @@
-# Node modules
+# Node.js 依赖目录
 node_modules/
-npm-debug.log*
-yarn-error.log*
-pnpm-lock.yaml
 
-# Build output
-.next/
+# 忽略 .env 文件（环境变量）
+.env
+.env.*    # 如果有 .env.local、.env.development 等
+
+# 忽略自定义的本地目录
+.ignored/
+
+# 日志文件
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 缓存文件
+.cache/
 dist/
 build/
-
-# Taro build
-temp/
-cache/
-*.tmp
-*.tsbuildinfo
-
-# Environment variables
-.env*
-!.env.example
-
-# Logs
-logs/
 *.log
 
-# Editor directories and files
+# VSCode 配置（可选）
 .vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
 
-# MacOS system files
+# Mac / 系统自动生成的垃圾文件
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-.Spotlight-V100
-.Trashes
-
-# Docker
-docker-compose.override.yml
-mysql-data/
-*.pid
-*.sock
-
-# Husky / lint-staged / git hooks
-.husky/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Generated files
-public/**/*.js
-public/**/*.css
-
-# Coverage reports
-coverage/
-
-# Misc
-*.bak
-*.swp
-*.tmp
+Thumbs.db
