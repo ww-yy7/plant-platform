@@ -1,0 +1,30 @@
+services:
+  mysql:
+    image: mysql:8          # 官方 Docker Hub 镜像
+    container_name: plant-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: plant_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  next-admin:
+    build: ./next-admin
+    container_name: plant-management
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=plant-mysql
+      - DB_USER=root
+      - DB_PASSWORD=root123
+      - DB_DATABASE=plant_db
+    depends_on:
+      - mysql
+
+  taro-app:
+    build: ./taro-app
+    container_name: plant-taro
+    # 小程序端不一定要跑容器，可以选择本地构建
+    command: ["npm", "run", "dev"]
